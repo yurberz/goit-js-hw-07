@@ -10,7 +10,7 @@ const ingredients = [
 const createIngredient = ingredients.map((ingredient) => {
   const ingredientRef = document.createElement("li");
   ingredientRef.classList.add("ingredients__item");
-  ingredientRef.textContent = `${ingredient}`;
+  ingredientRef.textContent = ingredient;
 
   return ingredientRef;
 });

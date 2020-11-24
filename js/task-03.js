@@ -16,10 +16,20 @@ const images = [
   },
 ];
 
-const createItem = (images) =>
-  `<li><img src="${images.url}" alt="${images.alt}"></li>`;
+// const createItem = (images) =>
+//   `<li><img src="${images.url}" alt="${images.alt}"></li>`;
 
-const item = images.map(createItem).join("");
+// const item = images.map(createItem).join("");
 
+// const galleryRef = document.querySelector("#gallery");
+// galleryRef.insertAdjacentHTML("afterbegin", item);
+
+//=== 2 вариант от Валеры
 const galleryRef = document.querySelector("#gallery");
-galleryRef.insertAdjacentHTML("afterbegin", item);
+
+images.forEach((el) => {
+  galleryRef.insertAdjacentHTML(
+    "afterbegin",
+    `<li><img src="${el.url}" alt="${el.alt}"></li>`
+  );
+});
